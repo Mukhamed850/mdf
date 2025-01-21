@@ -3,24 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Стоп! Вернись к работе!</title>
+    <title>!ОЧНИСЬ!</title>
     <style>
-        body { text-align: center; font-family: Arial, sans-serif; background-color: #f4f4f4; }
-        video { width: 80%; max-width: 600px; margin-top: 20px; }
+        body { 
+            text-align: center; 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f4f4; 
+            padding: 20px;
+        }
+        .name { 
+            font-size: 28px; 
+            font-weight: bold; 
+        }
+        .question {
+            font-size: 22px;
+        }
+        .highlight {
+            color: red; 
+            font-weight: bold;
+        }
+        video { 
+            width: 80%; 
+            max-width: 600px; 
+            margin-top: 20px; 
+        }
+        .after-video {
+            font-size: 22px; 
+            font-weight: bold; 
+            margin-top: 20px;
+        }
+        .breathe {
+            font-size: 18px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>Мухамед Ильгисович, не наступил ли сегодня тот самый день, чтобы Вы наконец сдались?</h1>
-    <video id="motivation-video" loop>
+    <p><span class="name">Мухамед Ильгисович</span>, <span class="question">не наступил ли сегодня тот самый день, чтобы Вы наконец <span class="highlight">сдались</span>?</span></p>
+    
+    <video id="motivation-video" autoplay loop>
         <source src="arsen.mp4" type="video/mp4">
         Ваш браузер не поддерживает тег видео.
     </video>
-    <p>Закрой эту вкладку и возвращайся к полезным делам!</p>
+
+    <p class="after-video">Ты понимаешь, что Жизнь ОДНА!!?? И она ПРОХОДИТ МИМО, ээ блять!!!!</p>
+    <p class="breathe">Выйди на свежий воздух и продышись, не дай шайтанам завладеть тобой!</p>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const video = document.getElementById('motivation-video');
-            video.muted = false;  // Отключаем "без звука"
+            video.muted = false;
             video.play().catch(error => {
                 console.log("Автовоспроизведение заблокировано, пробуем снова...");
                 setTimeout(() => video.play(), 1000);
